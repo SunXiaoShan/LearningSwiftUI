@@ -22,7 +22,12 @@ struct CustomLayoutButtonSwiftUIView: View {
             .foregroundColor(Color.white)
             .background(GeometryReader { proxy in
             Color.clear.preference(key: CustomLayoutButtonSwiftUIViewKey.self, value: proxy.size.width) })
-        .onPreferenceChange(CustomLayoutButtonSwiftUIViewKey.self) { self.width = $0
+        .onPreferenceChange(CustomLayoutButtonSwiftUIViewKey.self) {
+            let rawWidth = self.width
+            self.width = $0
+            let newWidth = self.width
+
+            print("onPreferenceChange. old:\(rawWidth) new:\(newWidth)")
         }
         .frame(width: width, height: width) .background(Circle().fill(Color.blue))
     }
