@@ -37,11 +37,22 @@ class ViewController: UIViewController {
         }
         
         print("=== extern c(2) bridge ==== \(count)")
-        let fileNamebuff:String = "fefe"
         let cppObject = UnsafeRawPointer(initializeCpp())
         if let content2 = hexdump2(cppObject) {
             print("\(String(cString: content2))")
         }
+
+        let fileNamebuff:String = "fefe"
+        let cString = fileNamebuff.cString(using:.utf8)
+        if let ccString = UnsafeMutablePointer<CChar>(mutating: cString) {
+            let cppObject2 = UnsafeRawPointer(initializeCpp2(ccString))
+            if let content2 = hexdump2(cppObject2) {
+                print("\(String(cString: content2))")
+            }
+        }
+        
+        
+        
 
         count += 1
         refreshUIView()

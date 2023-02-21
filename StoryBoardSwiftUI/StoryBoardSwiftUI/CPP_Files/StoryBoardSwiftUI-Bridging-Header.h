@@ -9,4 +9,5 @@ void worldCPP();
 const char * hexdump();
 
 const void * initializeCpp();
+const void * initializeCpp2(char * filename);
 const char * hexdump2(const void *object);

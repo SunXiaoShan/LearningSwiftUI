@@ -48,6 +48,12 @@ const void * initializeCpp() {
     return (void *)mbr;
 }
 
+const void * initializeCpp2(char * filename) {
+    printf("c char :%s", filename);
+    HelloWorldCppFile *mbr = new HelloWorldCppFile("eeexx");
+    return (void *)mbr;
+}
+
 const char *hexdump2(const void *object) {
     HelloWorldCppFile *mbr;
     static char retval[2048];
