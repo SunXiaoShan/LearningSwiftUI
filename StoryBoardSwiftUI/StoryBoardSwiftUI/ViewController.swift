@@ -24,8 +24,18 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionButton1(_ sender: Any) {
+        print("=== ObjC bridge ==== \(count)")
         objCObject.sayHello()
         objCObject.sayWorld()
+        print(objCObject.fileName())
+
+        print("=== extern c bridge ==== \(count)")
+        helloCPP()
+        worldCPP()
+        if let content = hexdump() {
+            print("\(String(cString: content))")
+        }
+
         count += 1
         refreshUIView()
     }

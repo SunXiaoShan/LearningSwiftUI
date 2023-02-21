@@ -10,7 +10,7 @@
 #include "HelloWorldCppFile.hpp"
 
 @interface ObjCBridgeCpp () {
-    HelloWorldCppFile *helloWorldCppFile;
+    std::unique_ptr<HelloWorldCppFile> helloWorldCppFile;
 }
 
 @end
@@ -20,7 +20,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        helloWorldCppFile = new HelloWorldCppFile("test");
+        helloWorldCppFile = std::make_unique<HelloWorldCppFile>("hello");
     }
     return self;
 }
@@ -33,8 +33,9 @@
     HelloWorldCppFile::world();
 }
 
-- (void)dealloc {
-    delete helloWorldCppFile;
+- (NSString *)fileName {
+    return [NSString stringWithCString:helloWorldCppFile->hexdump() encoding:NSASCIIStringEncoding];
+
 }
 
 @end

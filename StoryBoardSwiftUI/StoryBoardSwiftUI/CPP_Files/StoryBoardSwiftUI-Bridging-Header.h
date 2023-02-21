@@ -3,3 +3,7 @@
 //
 
 #import "ObjCBridgeCpp.h"
+
+void helloCPP();
+void worldCPP();
+const char * hexdump();

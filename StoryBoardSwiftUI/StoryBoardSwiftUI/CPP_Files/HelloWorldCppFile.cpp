@@ -28,6 +28,18 @@ const char * HelloWorldCppFile::hexdump() {
     return p;
 }
 
+extern "C" void helloCPP() {
+    return HelloWorldCppFile("filename").hello();
+}
+
+extern "C" void worldCPP() {
+    return HelloWorldCppFile::world();
+}
+
+extern "C" const char * hexdump() {
+    return HelloWorldCppFile("filename").hexdump();
+}
+
 
 
 
