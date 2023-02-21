@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     var count:Int = 0
+    
+    let objCObject = ObjCBridgeCpp()
 
     @IBOutlet weak var label1: UILabel!
     override func viewDidLoad() {
@@ -22,6 +24,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func actionButton1(_ sender: Any) {
+        objCObject.sayHello()
+        objCObject.sayWorld()
         count += 1
         refreshUIView()
     }
