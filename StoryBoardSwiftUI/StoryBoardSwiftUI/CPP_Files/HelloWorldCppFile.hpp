@@ -23,8 +23,16 @@ public:
     const char *hexdump();
 };
 
+#endif
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+    const void * initializeCpp();
+    const char * hexdump2(const void *object);
 
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* HelloWorldCppFile_hpp */

@@ -35,6 +35,13 @@ class ViewController: UIViewController {
         if let content = hexdump() {
             print("\(String(cString: content))")
         }
+        
+        print("=== extern c(2) bridge ==== \(count)")
+        let fileNamebuff:String = "fefe"
+        let cppObject = UnsafeRawPointer(initializeCpp())
+        if let content2 = hexdump2(cppObject) {
+            print("\(String(cString: content2))")
+        }
 
         count += 1
         refreshUIView()

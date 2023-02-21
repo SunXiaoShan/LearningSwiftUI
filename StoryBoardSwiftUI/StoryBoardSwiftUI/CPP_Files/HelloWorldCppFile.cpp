@@ -40,6 +40,25 @@ extern "C" const char * hexdump() {
     return HelloWorldCppFile("filename").hexdump();
 }
 
+// cpp
+#pragma mark - extern c (2)
+
+const void * initializeCpp() {
+    HelloWorldCppFile *mbr = new HelloWorldCppFile("eeexx");
+    return (void *)mbr;
+}
+
+const char *hexdump2(const void *object) {
+    HelloWorldCppFile *mbr;
+    static char retval[2048];
+
+    mbr = (HelloWorldCppFile *)object;
+    strcpy(retval, mbr -> hexdump());
+    return retval;
+}
+
+#pragma mark -
+
 
 
 

@@ -7,3 +7,6 @@
 void helloCPP();
 void worldCPP();
 const char * hexdump();
+
+const void * initializeCpp();
+const char * hexdump2(const void *object);
