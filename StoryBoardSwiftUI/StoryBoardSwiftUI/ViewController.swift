@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
 //        refreshUIView()
     }
-    
+
     func refreshUIView() {
         label1.text = "Hello \(count)"
     }
@@ -51,8 +51,10 @@ class ViewController: UIViewController {
             }
         }
         
-        
-        
+        let boostSample1:WorldBoostSignal = WorldBoostSignal()
+        boostSample1.initialSetup()
+        boostSample1.actionTriggerSignalEvent()
+        boostSample1.actionTriggerSignalEvent2()
 
         count += 1
         refreshUIView()

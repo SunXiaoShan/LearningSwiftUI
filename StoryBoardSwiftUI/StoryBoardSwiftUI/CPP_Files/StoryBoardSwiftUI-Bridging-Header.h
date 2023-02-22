@@ -3,6 +3,7 @@
 //
 
 #import "ObjCBridgeCpp.h"
+#import "WorldBoostSignal.h"
 
 void helloCPP();
 void worldCPP();

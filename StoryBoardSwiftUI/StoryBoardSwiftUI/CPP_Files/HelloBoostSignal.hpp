@@ -23,8 +23,8 @@ public:
     ~HelloBoostSignal();
 
 public:
+    boost::signals2::signal<void(int)> signalEvent1;
     boost::signals2::scoped_connection signalEventConnection;
-    boost::signals2::signal<void()> s;
     boost::signals2::signal<void(void *, int)> signalEvent2;
     boost::signals2::scoped_connection signalEvent2Connection;
 };

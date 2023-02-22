@@ -15,4 +15,5 @@ HelloBoostSignal::HelloBoostSignal()
 HelloBoostSignal::~HelloBoostSignal()
 {
     signalEventConnection.disconnect();
+    signalEvent2Connection.disconnect();
 }
