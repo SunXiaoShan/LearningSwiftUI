@@ -11,7 +11,6 @@
 
 #ifdef __cplusplus
 
-
 #include <boost/signals2/connection.hpp>
 #include <boost/signals2.hpp>
 #include <boost/signals2/signal.hpp>

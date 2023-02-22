@@ -35,7 +35,6 @@
 
 - (NSString *)fileName {
     return [NSString stringWithCString:helloWorldCppFile->hexdump() encoding:NSASCIIStringEncoding];
-
 }
 
 @end

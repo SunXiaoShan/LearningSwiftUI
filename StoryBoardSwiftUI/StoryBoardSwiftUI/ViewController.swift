@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         if let content = hexdump() {
             print("\(String(cString: content))")
         }
-        
+
         print("=== extern c(2) bridge ==== \(count)")
         let cppObject = UnsafeRawPointer(initializeCpp())
         if let content2 = hexdump2(cppObject) {
@@ -50,7 +50,8 @@ class ViewController: UIViewController {
                 print("\(String(cString: content2))")
             }
         }
-        
+
+        // demo boost
         let boostSample1:WorldBoostSignal = WorldBoostSignal()
         boostSample1.initialSetup()
         boostSample1.actionTriggerSignalEvent()
