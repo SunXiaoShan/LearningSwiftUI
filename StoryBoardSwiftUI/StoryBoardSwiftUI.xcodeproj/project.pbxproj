@@ -19,6 +19,7 @@
 		78131B85299F1762005715E3 /* Sample01SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131B84299F1762005715E3 /* Sample01SwiftUIView.swift */; };
 		78131B88299F1D09005715E3 /* Sample02ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131B87299F1D09005715E3 /* Sample02ViewController.swift */; };
 		78131B8A299F2B8C005715E3 /* Sample03SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131B89299F2B8C005715E3 /* Sample03SwiftUIView.swift */; };
+		781431B229A5A56500C9E703 /* HelloBoostSignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 781431B129A5A56500C9E703 /* HelloBoostSignal.cpp */; };
 		78B2FCF329A461B900EC02EB /* HelloWorldCppFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78B2FCF129A461B900EC02EB /* HelloWorldCppFile.cpp */; };
 		78B2FCF729A46CAF00EC02EB /* ObjCBridgeCpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78B2FCF629A46CAF00EC02EB /* ObjCBridgeCpp.mm */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,8 @@
 		78131B84299F1762005715E3 /* Sample01SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample01SwiftUIView.swift; sourceTree = "<group>"; };
 		78131B87299F1D09005715E3 /* Sample02ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample02ViewController.swift; sourceTree = "<group>"; };
 		78131B89299F2B8C005715E3 /* Sample03SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample03SwiftUIView.swift; sourceTree = "<group>"; };
+		781431B029A5A56500C9E703 /* HelloBoostSignal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HelloBoostSignal.hpp; sourceTree = "<group>"; };
+		781431B129A5A56500C9E703 /* HelloBoostSignal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloBoostSignal.cpp; sourceTree = "<group>"; };
 		78B2FCED29A45D0D00EC02EB /* StoryBoardSwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryBoardSwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		78B2FCF129A461B900EC02EB /* HelloWorldCppFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldCppFile.cpp; sourceTree = "<group>"; };
 		78B2FCF229A461B900EC02EB /* HelloWorldCppFile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HelloWorldCppFile.hpp; sourceTree = "<group>"; };
@@ -115,6 +118,7 @@
 				78131B53299F13D0005715E3 /* AppDelegate.swift */,
 				78131B5C299F13D1005715E3 /* Assets.xcassets */,
 				78B2FCEC29A45CC400EC02EB /* CPP_Files */,
+				781431AF29A5A24D00C9E703 /* CppExternalLibs */,
 				78131B61299F13D1005715E3 /* Info.plist */,
 				78131B5E299F13D1005715E3 /* LaunchScreen.storyboard */,
 				78131B59299F13D0005715E3 /* Main.storyboard */,
@@ -161,9 +165,18 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		781431AF29A5A24D00C9E703 /* CppExternalLibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CppExternalLibs;
+			sourceTree = "<group>";
+		};
 		78B2FCEC29A45CC400EC02EB /* CPP_Files */ = {
 			isa = PBXGroup;
 			children = (
+				781431B129A5A56500C9E703 /* HelloBoostSignal.cpp */,
+				781431B029A5A56500C9E703 /* HelloBoostSignal.hpp */,
 				78B2FCF129A461B900EC02EB /* HelloWorldCppFile.cpp */,
 				78B2FCF229A461B900EC02EB /* HelloWorldCppFile.hpp */,
 				78B2FCED29A45D0D00EC02EB /* StoryBoardSwiftUI-Bridging-Header.h */,
@@ -313,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B2FCF729A46CAF00EC02EB /* ObjCBridgeCpp.mm in Sources */,
+				781431B229A5A56500C9E703 /* HelloBoostSignal.cpp in Sources */,
 				78131B58299F13D0005715E3 /* ViewController.swift in Sources */,
 				78B2FCF329A461B900EC02EB /* HelloWorldCppFile.cpp in Sources */,
 				78131B8A299F2B8C005715E3 /* Sample03SwiftUIView.swift in Sources */,
@@ -425,13 +439,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -479,12 +496,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -500,7 +520,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72ES32VZUA;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /opt/homebrew/include;
 				INFOPLIST_FILE = StoryBoardSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -511,6 +531,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/lib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.garmin.test.dev.tool.StoryBoardSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,7 +556,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 72ES32VZUA;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = /opt/homebrew/include;
 				INFOPLIST_FILE = StoryBoardSwiftUI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -546,6 +567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/lib;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.garmin.test.dev.tool.StoryBoardSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
