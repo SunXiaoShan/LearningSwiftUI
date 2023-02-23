@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DemoTCA/DemoTCA.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StoryBoardSwiftUI/StoryBoardSwiftUI.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DemoSwiftUI/DemoSwiftUI.xcodeproj">
+   </FileRef>
+</Workspace>
