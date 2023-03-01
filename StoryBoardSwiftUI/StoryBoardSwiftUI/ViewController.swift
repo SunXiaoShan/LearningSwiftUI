@@ -50,6 +50,14 @@ class ViewController: UIViewController {
                 print("\(String(cString: content2))")
             }
         }
+        
+        globalCallback = {
+            if let ptr = $0 {
+                let str = String(cString: ptr)
+                print(str)
+            }
+        }
+        callback_web_disconnected()
 
         // demo boost
         let boostSample1:WorldBoostSignal = WorldBoostSignal()

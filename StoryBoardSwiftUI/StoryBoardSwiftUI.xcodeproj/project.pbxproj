@@ -21,6 +21,7 @@
 		78131B8A299F2B8C005715E3 /* Sample03SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131B89299F2B8C005715E3 /* Sample03SwiftUIView.swift */; };
 		781431B229A5A56500C9E703 /* HelloBoostSignal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 781431B129A5A56500C9E703 /* HelloBoostSignal.cpp */; };
 		781431B629A5DA2700C9E703 /* WorldBoostSignal.mm in Sources */ = {isa = PBXBuildFile; fileRef = 781431B429A5DA2700C9E703 /* WorldBoostSignal.mm */; };
+		78538AE129AF2782003BCF82 /* Foo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78538ADF29AF2782003BCF82 /* Foo.cpp */; };
 		78B2FCF329A461B900EC02EB /* HelloWorldCppFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 78B2FCF129A461B900EC02EB /* HelloWorldCppFile.cpp */; };
 		78B2FCF729A46CAF00EC02EB /* ObjCBridgeCpp.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78B2FCF629A46CAF00EC02EB /* ObjCBridgeCpp.mm */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,8 @@
 		781431B129A5A56500C9E703 /* HelloBoostSignal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloBoostSignal.cpp; sourceTree = "<group>"; };
 		781431B429A5DA2700C9E703 /* WorldBoostSignal.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = WorldBoostSignal.mm; sourceTree = "<group>"; };
 		781431B529A5DA2700C9E703 /* WorldBoostSignal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldBoostSignal.h; sourceTree = "<group>"; };
+		78538ADF29AF2782003BCF82 /* Foo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Foo.cpp; sourceTree = "<group>"; };
+		78538AE029AF2782003BCF82 /* Foo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Foo.hpp; sourceTree = "<group>"; };
 		78B2FCED29A45D0D00EC02EB /* StoryBoardSwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryBoardSwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		78B2FCF129A461B900EC02EB /* HelloWorldCppFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldCppFile.cpp; sourceTree = "<group>"; };
 		78B2FCF229A461B900EC02EB /* HelloWorldCppFile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HelloWorldCppFile.hpp; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 		78B2FCEC29A45CC400EC02EB /* CPP_Files */ = {
 			isa = PBXGroup;
 			children = (
+				78538ADF29AF2782003BCF82 /* Foo.cpp */,
+				78538AE029AF2782003BCF82 /* Foo.hpp */,
 				781431B129A5A56500C9E703 /* HelloBoostSignal.cpp */,
 				781431B029A5A56500C9E703 /* HelloBoostSignal.hpp */,
 				78B2FCF129A461B900EC02EB /* HelloWorldCppFile.cpp */,
@@ -323,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				78B2FCF729A46CAF00EC02EB /* ObjCBridgeCpp.mm in Sources */,
+				78538AE129AF2782003BCF82 /* Foo.cpp in Sources */,
 				781431B229A5A56500C9E703 /* HelloBoostSignal.cpp in Sources */,
 				78131B58299F13D0005715E3 /* ViewController.swift in Sources */,
 				78B2FCF329A461B900EC02EB /* HelloWorldCppFile.cpp in Sources */,

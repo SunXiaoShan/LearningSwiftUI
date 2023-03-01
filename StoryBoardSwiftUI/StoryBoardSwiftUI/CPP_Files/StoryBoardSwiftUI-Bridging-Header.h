@@ -5,6 +5,8 @@
 #import "ObjCBridgeCpp.h"
 #import "WorldBoostSignal.h"
 
+#include "Foo.hpp"
+
 void helloCPP();
 void worldCPP();
 const char * hexdump();
