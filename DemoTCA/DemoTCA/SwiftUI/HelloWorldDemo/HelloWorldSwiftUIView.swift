@@ -10,12 +10,15 @@ struct CellModule:Equatable,Identifiable {
 struct HelloWorldState: Equatable {
     var cells: [CellModule] = []
     var isLoading: Bool = false
+    var count:Int = 0
 }
 
 enum HelloWorldAction {
     case loadData
     case loadRecipesDone(TaskResult<[RecipeModel]>)
     case rowTap(selectId: Int)
+    case increase
+    case decrease
 }
 
 struct HelloWorldEnvironment {}
@@ -33,7 +36,6 @@ func convertRecipe2CellModule(_ reciptList:[RecipeModel]) -> [CellModule] {
     return res
 }
 
-private enum CancelID {}
 let helloWorldReducer = AnyReducer<
     HelloWorldState,
     HelloWorldAction,
@@ -60,8 +62,17 @@ let helloWorldReducer = AnyReducer<
     case .rowTap(selectId: let selectId):
         NSLog("reducer -> rowTap:\(selectId)")
         return .none
+        
+    case .increase:
+        state.count += 1
+        return .none
+        
+    case .decrease:
+        state.count -= 1
+        return .none
     }
 }
+.debug()
 
 struct HelloWorldView: View {
     typealias ViewStoreType = ViewStore<HelloWorldState, HelloWorldAction>
