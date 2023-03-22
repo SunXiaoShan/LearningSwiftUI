@@ -62,11 +62,11 @@ let helloWorldReducer = AnyReducer<
     case .rowTap(selectId: let selectId):
         NSLog("reducer -> rowTap:\(selectId)")
         return .none
-        
+
     case .increase:
         state.count += 1
         return .none
-        
+
     case .decrease:
         state.count -= 1
         return .none

@@ -18,6 +18,8 @@
 		78806A1B29B02FD40033E2DF /* SampleUnitTestSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78806A1A29B02FD40033E2DF /* SampleUnitTestSwiftUIView.swift */; };
 		78806A1C29B02FD40033E2DF /* SampleUnitTestSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78806A1A29B02FD40033E2DF /* SampleUnitTestSwiftUIView.swift */; };
 		78806A1E29B030800033E2DF /* SampleUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78806A1D29B030800033E2DF /* SampleUnitTests.swift */; };
+		78D4ED8829BADDF500566573 /* MultiLayerSampleSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D4ED8729BADDF500566573 /* MultiLayerSampleSwiftUIView.swift */; };
+		78ED525729B1C309003A1716 /* MultiLayerDemoSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78ED525629B1C309003A1716 /* MultiLayerDemoSwiftUIView.swift */; };
 		78F0079729A6FD7E00AD6C5B /* DemoTCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0079629A6FD7E00AD6C5B /* DemoTCAApp.swift */; };
 		78F0079929A6FD7E00AD6C5B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F0079829A6FD7E00AD6C5B /* ContentView.swift */; };
 		78F0079B29A6FD7F00AD6C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78F0079A29A6FD7F00AD6C5B /* Assets.xcassets */; };
@@ -55,6 +57,8 @@
 		7861450E29A8AA8800D9789B /* BSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSwiftUIView.swift; sourceTree = "<group>"; };
 		78806A1A29B02FD40033E2DF /* SampleUnitTestSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUnitTestSwiftUIView.swift; sourceTree = "<group>"; };
 		78806A1D29B030800033E2DF /* SampleUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleUnitTests.swift; sourceTree = "<group>"; };
+		78D4ED8729BADDF500566573 /* MultiLayerSampleSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLayerSampleSwiftUIView.swift; sourceTree = "<group>"; };
+		78ED525629B1C309003A1716 /* MultiLayerDemoSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiLayerDemoSwiftUIView.swift; sourceTree = "<group>"; };
 		78F0079329A6FD7E00AD6C5B /* DemoTCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoTCA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78F0079629A6FD7E00AD6C5B /* DemoTCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTCAApp.swift; sourceTree = "<group>"; };
 		78F0079829A6FD7E00AD6C5B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,15 @@
 			path = DemoUnitTest;
 			sourceTree = "<group>";
 		};
+		78ED525529B1C2D6003A1716 /* MultiLayDemo */ = {
+			isa = PBXGroup;
+			children = (
+				78ED525629B1C309003A1716 /* MultiLayerDemoSwiftUIView.swift */,
+				78D4ED8729BADDF500566573 /* MultiLayerSampleSwiftUIView.swift */,
+			);
+			path = MultiLayDemo;
+			sourceTree = "<group>";
+		};
 		78F0078A29A6FD7E00AD6C5B = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +217,7 @@
 			children = (
 				78806A1929B02FA40033E2DF /* DemoUnitTest */,
 				78F007EA29A7340400AD6C5B /* HelloWorldDemo */,
+				78ED525529B1C2D6003A1716 /* MultiLayDemo */,
 				7861450829A8A9D100D9789B /* MultiView */,
 				7861450529A89E2600D9789B /* TestView01 */,
 			);
@@ -358,7 +372,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78ED525729B1C309003A1716 /* MultiLayerDemoSwiftUIView.swift in Sources */,
 				7861450729A89E3E00D9789B /* Test01SwiftUIView.swift in Sources */,
+				78D4ED8829BADDF500566573 /* MultiLayerSampleSwiftUIView.swift in Sources */,
 				78F0079929A6FD7E00AD6C5B /* ContentView.swift in Sources */,
 				78F0079729A6FD7E00AD6C5B /* DemoTCAApp.swift in Sources */,
 				7861450D29A8AA7F00D9789B /* ASwiftUIView.swift in Sources */,

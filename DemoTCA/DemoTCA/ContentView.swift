@@ -11,6 +11,8 @@ import ComposableArchitecture
 struct ContentView: View {
     @State var state: HelloWorldState = HelloWorldState()
     
+    let state2 = RootState(stateA: AState(), stateB: BState())
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,6 +23,15 @@ struct ContentView: View {
                 initialState: state,
                 reducer: helloWorldReducer,
                 environment: .live))
+            MultiLayerSampleView(store: Store(
+                initialState: MultiLayerSampleState(),
+                reducer: multiLayerSampleReducer,
+                environment: .live))
+            RootView(store: .init(
+                initialState: state2,
+                reducer: rootReducer,
+                environment: .live
+            ))
         }
         .padding()
     }

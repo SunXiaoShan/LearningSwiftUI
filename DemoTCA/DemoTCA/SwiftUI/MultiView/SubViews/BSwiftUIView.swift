@@ -8,9 +8,15 @@
 import ComposableArchitecture
 import SwiftUI
 
-struct BState: Equatable {}
+struct BState: Equatable {
+    var count:Int = 0
+}
 
-enum BAction: Equatable {}
+enum BAction: Equatable {
+    case act1
+    case act2
+    case act3
+}
 
 struct BEnvironment {}
 
@@ -23,7 +29,17 @@ let _BReducer = AnyReducer<
     BAction,
     BEnvironment
 > { state, action, environment in
-        .none
+    switch action {
+    case .act1:
+        state.count += 1
+        return .none
+    case .act2:
+        state.count -= 1
+        return .none
+    case .act3:
+        state.count = 0
+        return .none
+    }
 }
 
 struct BView: View {
@@ -32,6 +48,25 @@ struct BView: View {
     
     var body: some View {
         WithViewStore(store) { viewStore in
+            Button {
+                print("click B act1")
+                viewStore.send(.act1)
+            } label: {
+                Text("B View - act1")
+            }
+            Button {
+                print("click B act2")
+                viewStore.send(.act2)
+            } label: {
+                Text("B View - act2")
+            }
+            Button {
+                print("click B act3")
+                viewStore.send(.act3)
+            } label: {
+                Text("B View - act3")
+            }
+            Text("B Value:\(viewStore.state.count)")
         }
     }
 }

@@ -28,8 +28,8 @@ final class SampleUnitTests: XCTestCase {
             reducer: sampleUnitTestReducer,
             environment: .live
         )
-        store.send(.increase) { state in
-            state.count += 2
+        store.send(.increase) {
+            $0.count += 1
       }
     }
 }
